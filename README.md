@@ -1,5 +1,5 @@
 <h1 align="center">Ravindu Vibuthi</h1>
-<p align="center">Full-Stack Developer · Software Engineer · Building Scalable, Real-World Solutions
+<p align="center">Full-Stack Developer · AI ML Researcher · Software Engineer · Building Scalable, Real-World Solutions
 
 </p>
 
