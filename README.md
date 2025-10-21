@@ -1,5 +1,7 @@
 <h1 align="center">Ravindu Vibuthi</h1>
-<p align="center">Information Technology Undergraduate · University of Colombo School of Computing · Full-Stack Developer</p>
+<p align="center">Full-Stack Developer · Software Engineer · Building Scalable, Real-World Solutions
+
+</p>
 
 ---
 
