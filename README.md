@@ -29,35 +29,4 @@ I'm always eager to learn, grow, and collaborate on innovative projects. **Feel 
 
 ---
 
-## GitHub Stats & Activity
 
-<!-- Note: You'll need to update these API endpoints with your own -->
-<p align="center">
-  <img src="https://your-api-endpoint/github-contributions/card" height="180"/>
-</p>
-
-<p align="center">
-  <img src="https://your-api-endpoint/github-contributions/chart"/>
-</p>
-
----
-
-## Connect With Me
-
-<p align="center">
-  <a href="https://your-website.com" target="_blank" title="Personal Website">
-    <img src="https://img.shields.io/badge/-Website-000?style=for-the-badge&logo=vercel&logoColor=white" />
-  </a>
-  <a href="https://linkedin.com/in/your-linkedin" target="_blank" title="LinkedIn">
-    <img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-  <a href="mailto:your-email@example.com" target="_blank" title="Email">
-    <img src="https://img.shields.io/badge/-Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
-</p>
-
----
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=ravinduvibu&label=Profile%20Views&color=0e75b6&style=flat" alt="ravinduvibu" />
-</p>
