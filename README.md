@@ -1,4 +1,4 @@
-# 👋 Hi, I'm Ravindu Vibhuthi
+<h1 align="center"><b>Hi, I'm Ravindu Vibuthi</b></h1>
 
 **AI Developer • Full-Stack Engineer • AI Product Builder**  
 Building intelligent, scalable, real-world products using AI + Web Technologies
@@ -7,9 +7,7 @@ Building intelligent, scalable, real-world products using AI + Web Technologies
 
 ## 🚀 About Me
 
-I'm a passionate Information Technology undergraduate at the University of Colombo School of Computing, now deeply focused on **AI development and intelligent systems**.
-
-I combine my strong foundation in **frontend and backend engineering** with modern **AI technologies** to build practical, production-ready AI-powered products — not just experiments.
+I'm a passionate Information Technology undergraduate at the University of Colombo School of Computing, now deeply focused on AI development and intelligent systems, with 1+ year of hands-on industry experience across both Full-Stack and AI development.
 
 My current focus areas include:
 - 🤖 AI Agents & Autonomous Systems  
