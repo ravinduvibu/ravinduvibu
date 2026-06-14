@@ -25,56 +25,11 @@ ravindu = {
     "name"       : "Ravindu Vibuthi",
     "role"       : ["ML Engineer", "MLOps Architect", "Full-Stack AI Developer"],
     "university" : "University of Colombo School of Computing (UCSC)",
-    "focus"      : ["Computer Vision", "NLP / LLMs", "Tabular ML", "AI Product Dev"],
     "philosophy" : "Ship working ML systems — not just notebooks.",
-    "currently"  : "Building end-to-end ML pipelines with full production infrastructure",
 }
 ```
 
-> I don't just train models. I **architect**, **version**, **deploy**, and **monitor** them — end-to-end, from raw data to live production systems backed by real DevOps.
-
----
-
-## 🏗️ ML System Architecture
-
-> Full-stack ML isn't just a model. Here's how I build the complete system:
-
-```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                      END-TO-END ML SYSTEM DESIGN                        │
-├─────────────────────────────────────────────────────────────────────────┤
-│                                                                         │
-│  [Raw Data]                                                             │
-│      │                                                                  │
-│      ▼                                                                  │
-│  ┌──────────────┐    ┌──────────────┐    ┌──────────────────────────┐  │
-│  │  Data Layer  │───▶│  DVC / Delta │───▶│   Feature Engineering    │  │
-│  │  S3 / GCS   │    │  Versioning  │    │   Pipelines (Prefect)    │  │
-│  └──────────────┘    └──────────────┘    └──────────────────────────┘  │
-│                                                     │                   │
-│                                                     ▼                   │
-│  ┌──────────────┐    ┌──────────────┐    ┌──────────────────────────┐  │
-│  │  Experiment  │◀──▶│   MLflow /   │◀───│   Model Training Loop    │  │
-│  │  Tracking   │    │   W&B        │    │   PyTorch / HuggingFace  │  │
-│  └──────────────┘    └──────────────┘    └──────────────────────────┘  │
-│                                                     │                   │
-│                                                     ▼                   │
-│  ┌──────────────┐    ┌──────────────┐    ┌──────────────────────────┐  │
-│  │  Model Reg.  │───▶│  Docker +    │───▶│   FastAPI / TorchServe  │  │
-│  │  MLflow/S3  │    │  Kubernetes  │    │   Model Serving Layer    │  │
-│  └──────────────┘    └──────────────┘    └──────────────────────────┘  │
-│                                                     │                   │
-│                                                     ▼                   │
-│  ┌──────────────┐    ┌──────────────┐    ┌──────────────────────────┐  │
-│  │  Prometheus  │    │  Grafana     │    │   Drift Detection /      │  │
-│  │  + Alerts   │◀───│  Dashboards  │◀───│   Evidently AI           │  │
-│  └──────────────┘    └──────────────┘    └──────────────────────────┘  │
-│                                                     │                   │
-│                                                     ▼                   │
-│                            [Next.js Frontend / React UI]                │
-│                                                                         │
-└─────────────────────────────────────────────────────────────────────────┘
-```
+> I don't just train models. I **architect**, **version**, **deploy**, and **monitor** them — end-to-end, from raw data to live production systems backed by real infrastructure.
 
 ---
 
@@ -134,6 +89,8 @@ ravindu = {
 [![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)](#)
 [![YOLO](https://img.shields.io/badge/YOLO-00FFFF?style=for-the-badge&logo=yolo&logoColor=black)](#)
 [![Torchvision](https://img.shields.io/badge/Torchvision-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](#)
+[![Albumentations](https://img.shields.io/badge/Albumentations-CC0000?style=for-the-badge&logo=python&logoColor=white)](#)
+[![ONNX](https://img.shields.io/badge/ONNX-005CED?style=for-the-badge&logo=onnx&logoColor=white)](#)
 
 ### NLP & LLMs
 [![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)](#)
@@ -148,68 +105,6 @@ ravindu = {
 [![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](#)
 
 </div>
-
----
-
-## 🔬 ML Pipeline — How I Build a Full System
-
-```bash
-# ── Stage 1: Data Versioning ─────────────────────────────────────────────────
-dvc init
-dvc add data/raw/
-dvc push                          # Remote: S3 / GCS
-
-# ── Stage 2: Experiment Tracking ─────────────────────────────────────────────
-mlflow experiments create --name "cv-classifier-v1"
-# → params, metrics, artifacts all tracked per run
-
-# ── Stage 3: Model Training ───────────────────────────────────────────────────
-python train.py \
-  --config configs/resnet50.yaml \
-  --track mlflow \
-  --epochs 50
-
-# ── Stage 4: Containerize the Model ──────────────────────────────────────────
-docker build -t ravindu/ml-api:v1.0 .
-docker push ravindu/ml-api:v1.0
-
-# ── Stage 5: Deploy to Kubernetes ────────────────────────────────────────────
-kubectl apply -f k8s/deployment.yaml
-kubectl apply -f k8s/hpa.yaml          # Horizontal Pod Autoscaler
-
-# ── Stage 6: Monitor in Production ───────────────────────────────────────────
-# Prometheus scrapes /metrics from FastAPI
-# Grafana dashboard: latency, throughput, prediction drift
-# Evidently AI: feature drift alerts → triggers retraining pipeline
-```
-
----
-
-## 🏛️ Full-Stack Architecture
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                     FULL-STACK AI PRODUCT                       │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│  FRONTEND          BACKEND              ML LAYER                │
-│  ─────────         ─────────            ──────────              │
-│  Next.js    ──▶   Node.js / Express ──▶  FastAPI              │
-│  React      ──▶   REST / GraphQL    ──▶  PyTorch Model         │
-│  Tailwind         Microservices          TorchServe / Triton    │
-│  TypeScript       Auth / JWT             Model Registry         │
-│                   Rate Limiting          A/B Experiment Layer   │
-│                        │                                        │
-│                        ▼                                        │
-│               PostgreSQL  MongoDB  Redis                        │
-│               (Structured)(Docs)  (Cache/Queue)                 │
-│                        │                                        │
-│                        ▼                                        │
-│           AWS (EKS + S3 + ECR) / GCP (GKE + GCS)              │
-│                GitHub Actions CI/CD → ArgoCD GitOps             │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
-```
 
 ---
 
@@ -238,6 +133,25 @@ kubectl apply -f k8s/hpa.yaml          # Horizontal Pod Autoscaler
 
 ---
 
+## 🧩 Core Competencies
+
+| Domain | Capabilities |
+|--------|-------------|
+| **ML Architecture** | Design reproducible pipelines from data ingestion → feature engineering → training → versioned model registry → serving |
+| **MLOps** | Experiment tracking with MLflow & W&B, automated retraining triggers, model lifecycle management |
+| **Data Versioning** | DVC-driven dataset versioning linked to model versions for full reproducibility across environments |
+| **Computer Vision** | Image classification, object detection (YOLO), semantic segmentation, and custom training loops with PyTorch and Torchvision |
+| **CV Data Engineering** | Augmentation pipelines with Albumentations, annotation workflows, and dataset curation for production-grade CV models |
+| **CV Model Export** | ONNX export, TorchScript, and TensorRT optimization for low-latency inference at the edge and in the cloud |
+| **LLMs & RAG** | Retrieval-augmented generation systems using LangChain, Pinecone, and ChromaDB with fine-tuning via PEFT/LoRA |
+| **Containerization** | Docker multi-stage builds optimized for ML inference; GPU-enabled container configs for training workloads |
+| **Kubernetes** | Scalable model API deployment with HPA, rolling updates, resource limits, and namespace isolation |
+| **CI/CD for ML** | GitHub Actions pipelines: test → lint → build image → push to ECR/GCR → trigger ArgoCD GitOps deploy |
+| **Monitoring** | Prometheus metrics on model endpoints, Grafana dashboards for latency and throughput, Evidently AI for feature and prediction drift |
+| **Full-Stack AI** | End-to-end AI products — model → FastAPI serving layer → Next.js frontend → cloud deployment on AWS / GCP |
+
+---
+
 ## 📊 GitHub Stats
 
 <div align="center">
@@ -253,40 +167,11 @@ kubectl apply -f k8s/hpa.yaml          # Horizontal Pod Autoscaler
 
 ---
 
-## 🎯 What I'm Currently Studying / Building
-
-```
-✅  End-to-end MLOps pipeline  →  DVC + MLflow + Kubernetes + Grafana
-✅  LLM Fine-tuning with LoRA  →  HuggingFace PEFT on custom datasets
-✅  RAG system with Pinecone   →  LangChain + FastAPI + Next.js frontend
-🔨  Model drift monitoring     →  Evidently AI + Prometheus alerts
-🔨  Multi-modal CV pipeline    →  YOLO + custom training loop + TorchServe
-📚  Studying:                  →  Distributed training, Triton Inference Server
-```
-
----
-
-## 🧩 Core Strengths
-
-| Domain | What I Bring |
-|--------|-------------|
-| **ML Architecture** | Design full model pipelines from data ingestion → training → versioning → serving |
-| **MLOps** | Experiment tracking, model registry, automated retraining, drift monitoring |
-| **Data Versioning** | DVC-based reproducible datasets tied to model versions |
-| **Containerization** | Docker multi-stage builds optimized for ML inference workloads |
-| **Kubernetes** | Deploying scalable model APIs with HPA, rolling updates, and resource limits |
-| **CI/CD for ML** | GitHub Actions pipelines that test, build, push Docker images, and trigger K8s deploys |
-| **LLMs & RAG** | Building retrieval-augmented generation systems with vector DBs and LangChain |
-| **Full-Stack** | Complete AI products — model → FastAPI → Next.js frontend → cloud deployment |
-| **Computer Vision** | Classification, detection, segmentation pipelines with PyTorch |
-
----
-
-## 🚀 Goal
+## 🚀 Philosophy
 
 > Build AI systems that are **production-grade, reproducible, and monitored** — not just notebooks that work once.
 
-I think in systems. Every project I build includes data versioning, experiment tracking, containerized deployment, and observability from day one.
+Every system I build is designed with data versioning, experiment tracking, containerized deployment, and observability from day one.
 
 ---
 
