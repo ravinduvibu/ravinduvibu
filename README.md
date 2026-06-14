@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- HERO BANNER -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=200&section=header&text=Ravindu%20Vibuthi&fontSize=52&fontColor=ffffff&fontAlignY=38&desc=ML%20Engineer%20%E2%80%A2%20MLOps%20Architect%20%E2%80%A2%20AI%20Product%20Builder&descAlignY=60&descSize=18&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=200&section=header&text=Ravindu%20Vibuthi&fontSize=52&fontColor=ffffff&fontAlignY=38&desc=AI%2FML%20Engineer%20%E2%80%A2%20MLOps%20Architect%20%E2%80%A2%20AI%20Product%20Builder&descAlignY=60&descSize=18&animation=fadeIn" width="100%"/>
 
 <!-- TYPING ANIMATION -->
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3000&pause=800&color=A78BFA&center=true&vCenter=true&multiline=true&repeat=true&width=750&height=60&lines=Building+Full-Stack+ML+Systems+%F0%9F%A7%A0;From+Raw+Data+%E2%86%92+Production+Models+%E2%86%92+Live+APIs)](https://git.io/typing-svg)
@@ -9,10 +9,10 @@
 <br/>
 
 <!-- STATUS BADGES -->
-[![University](https://img.shields.io/badge/UCSC-Information%20Technology-7C3AED?style=for-the-badge&logo=graduation-cap&logoColor=white)](https://www.ucsc.cmb.ac.lk/)
-[![Experience](https://img.shields.io/badge/Industry-1%2B%20Year%20Experience-10B981?style=for-the-badge&logo=briefcase&logoColor=white)](#)
-[![Focus](https://img.shields.io/badge/Focus-MLOps%20%7C%20LLMs%20%7C%20CV-F59E0B?style=for-the-badge&logo=brain&logoColor=white)](#)
-[![Open to Work](https://img.shields.io/badge/Status-Open%20to%20Opportunities-EF4444?style=for-the-badge&logo=target&logoColor=white)](#)
+[![University](https://img.shields.io/badge/🎓%20UCSC-BSc%20Information%20Technology-7C3AED?style=for-the-badge&logoColor=white)](https://www.ucsc.cmb.ac.lk/)
+[![Experience](https://img.shields.io/badge/⚡%20Industry-1%2B%20Year%20Experience-10B981?style=for-the-badge&logoColor=white)](#)
+[![Focus](https://img.shields.io/badge/🧠%20Expertise-MLOps%20%7C%20LLMs%20%7C%20CV-F59E0B?style=for-the-badge&logoColor=white)](#)
+[![Open to Work](https://img.shields.io/badge/🚀%20Status-Open%20to%20Opportunities-EF4444?style=for-the-badge&logoColor=white)](#)
 
 </div>
 
@@ -23,7 +23,7 @@
 ```python
 ravindu = {
     "name"       : "Ravindu Vibuthi",
-    "role"       : ["ML Engineer", "MLOps Architect", "Full-Stack AI Developer"],
+    "role"       : ["AI/ML Engineer", "MLOps Architect", "Full-Stack AI Developer"],
     "university" : "University of Colombo School of Computing (UCSC)",
     "philosophy" : "Ship working ML systems — not just notebooks.",
 }
@@ -152,21 +152,6 @@ ravindu = {
 
 ---
 
-## 📊 GitHub Stats
-
-<div align="center">
-
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=RavinduVibuthi&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=A78BFA&icon_color=A78BFA&text_color=c9d1d9"/>
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=RavinduVibuthi&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=A78BFA&text_color=c9d1d9&langs_count=8"/>
-
-<br/>
-
-[![GitHub Streak](https://streak-stats.demolab.com?user=RavinduVibuthi&theme=tokyonight&hide_border=true&background=0d1117&stroke=A78BFA&ring=A78BFA&fire=F59E0B&currStreakLabel=A78BFA)](https://git.io/streak-stats)
-
-</div>
-
----
-
 ## 🚀 Philosophy
 
 > Build AI systems that are **production-grade, reproducible, and monitored** — not just notebooks that work once.
@@ -185,7 +170,7 @@ Every system I build is designed with data versioning, experiment tracking, cont
 
 <br/>
 
-*Open to ML Engineering roles, MLOps positions, AI product collaborations, and research opportunities.*
+*Open to AI/ML Engineering roles, MLOps positions, AI product collaborations, and research opportunities.*
 
 </div>
 
